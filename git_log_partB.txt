@@ -1,0 +1,93 @@
+commit 92e8c1366c3fb32d8de5dfbf93432bffff4abfd9
+Author: Kiran Nadigatla <knadigatla@gmail.com>
+Date:   Sat Sep 3 15:35:27 2016 -0700
+
+    Re-adding file2.txt
+
+diff --git a/file2.txt b/file2.txt
+new file mode 100644
+index 0000000..13898e7
+--- /dev/null
++++ b/file2.txt
+@@ -0,0 +1 @@
++Graduation Year - 2017
+
+commit 205ef4992265981ec5ab6b4b7b28030532b0f86c
+Author: Kiran Nadigatla <knadigatla@gmail.com>
+Date:   Sat Sep 3 15:18:43 2016 -0700
+
+    Deleting file2.txt
+
+diff --git a/file1.txt b/file1.txt
+index 7489c12..fa0c079 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1,3 +1,4 @@
+ Kiran Nadigatla Software Engineering
+ Favarite Restaurant - Gotta Eatta Pita
+ Favorite Movie - Pulp Fiction
++Favorite Color - Blue
+diff --git a/file2.txt b/file2.txt
+deleted file mode 100644
+index 13898e7..0000000
+--- a/file2.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-Graduation Year - 2017
+
+commit 5003517aa4c52f50de2e6f951f7551f3243958b1
+Author: Kiran Nadigatla <knadigatla@gmail.com>
+Date:   Sat Sep 3 15:12:36 2016 -0700
+
+    Added a file2 with grad year
+
+diff --git a/file2.txt b/file2.txt
+new file mode 100644
+index 0000000..13898e7
+--- /dev/null
++++ b/file2.txt
+@@ -0,0 +1 @@
++Graduation Year - 2017
+
+commit 3608a7839c3bf48e93a5b93fe055f3fa623090bd
+Author: Kiran Nadigatla <knadigatla@gmail.com>
+Date:   Sat Sep 3 15:01:58 2016 -0700
+
+    Added favorite Movie and Restaurant
+
+diff --git a/file1.txt b/file1.txt
+index afa5c37..7489c12 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1 +1,3 @@
+ Kiran Nadigatla Software Engineering
++Favarite Restaurant - Gotta Eatta Pita
++Favorite Movie - Pulp Fiction
+
+commit 02891f719701cb3b57baf119a84c2efd5d88cfa4
+Author: Kiran Nadigatla <knadigatla@gmail.com>
+Date:   Sat Sep 3 14:59:16 2016 -0700
+
+    Now has my major
+
+diff --git a/file1.txt b/file1.txt
+index 86f9849..afa5c37 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1 +1 @@
+-Kiran Nadigatla #89396
++Kiran Nadigatla Software Engineering
+
+commit 48d331f29ae90dbe1ad82edb48643ffe78fae88f
+Author: Kiran Nadigatla <knadigatla@gmail.com>
+Date:   Sat Sep 3 14:45:39 2016 -0700
+
+    Committing a new file with my name
+
+diff --git a/file1.txt b/file1.txt
+new file mode 100644
+index 0000000..86f9849
+--- /dev/null
++++ b/file1.txt
+@@ -0,0 +1 @@
++Kiran Nadigatla #89396
