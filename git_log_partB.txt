@@ -1,93 +1,36 @@
-commit 92e8c1366c3fb32d8de5dfbf93432bffff4abfd9
-Author: Kiran Nadigatla <knadigatla@gmail.com>
-Date:   Sat Sep 3 15:35:27 2016 -0700
+commit 3b9a8e900c3d8ab4c64a86f0b982c2b59abe3ee8
+Author: Florence Yeun <florwat@reddit.com>
+Date:   Tue Nov 17 17:23:25 2015 -0800
 
-    Re-adding file2.txt
+    Remove site.css_on_cname
+    
+    `Subreddit.css_on_cname` is no longer supported
 
-diff --git a/file2.txt b/file2.txt
-new file mode 100644
-index 0000000..13898e7
---- /dev/null
-+++ b/file2.txt
-@@ -0,0 +1 @@
-+Graduation Year - 2017
+commit 8b522270620e5f59d7dbf831c81b3997a61dcd58
+Author: Florence Yeun <florwat@reddit.com>
+Date:   Tue Nov 17 17:20:31 2015 -0800
 
-commit 205ef4992265981ec5ab6b4b7b28030532b0f86c
-Author: Kiran Nadigatla <knadigatla@gmail.com>
-Date:   Sat Sep 3 15:18:43 2016 -0700
+    Remove site.show_cname_sidebar
+    
+    `Subreddit.show_cname_sidebar` is no longer supprted.
 
-    Deleting file2.txt
+commit 071f5e46809fec025aba7fb9b84a77735208bb24
+Author: zeantsoi <zeantsoi@gmail.com>
+Date:   Wed Dec 2 11:29:36 2015 -0800
 
-diff --git a/file1.txt b/file1.txt
-index 7489c12..fa0c079 100644
---- a/file1.txt
-+++ b/file1.txt
-@@ -1,3 +1,4 @@
- Kiran Nadigatla Software Engineering
- Favarite Restaurant - Gotta Eatta Pita
- Favorite Movie - Pulp Fiction
-+Favorite Color - Blue
-diff --git a/file2.txt b/file2.txt
-deleted file mode 100644
-index 13898e7..0000000
---- a/file2.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--Graduation Year - 2017
+    Remove _count wrapper for rowcount
 
-commit 5003517aa4c52f50de2e6f951f7551f3243958b1
-Author: Kiran Nadigatla <knadigatla@gmail.com>
-Date:   Sat Sep 3 15:12:36 2016 -0700
+commit 8509c648bb1150accdf5f98c298384ce81a1418d
+Author: MelissaCole <melissa.engineer@gmail.com>
+Date:   Wed Dec 2 13:17:15 2015 -0800
 
-    Added a file2 with grad year
+    Don't show give gold link for deleted links
 
-diff --git a/file2.txt b/file2.txt
-new file mode 100644
-index 0000000..13898e7
---- /dev/null
-+++ b/file2.txt
-@@ -0,0 +1 @@
-+Graduation Year - 2017
+commit 84725525e8b8851ac76f9bf02f3f9b94ba9ff359
+Author: MelissaCole <melissa.engineer@gmail.com>
+Date:   Wed Dec 2 13:08:41 2015 -0800
 
-commit 3608a7839c3bf48e93a5b93fe055f3fa623090bd
-Author: Kiran Nadigatla <knadigatla@gmail.com>
-Date:   Sat Sep 3 15:01:58 2016 -0700
-
-    Added favorite Movie and Restaurant
-
-diff --git a/file1.txt b/file1.txt
-index afa5c37..7489c12 100644
---- a/file1.txt
-+++ b/file1.txt
-@@ -1 +1,3 @@
- Kiran Nadigatla Software Engineering
-+Favarite Restaurant - Gotta Eatta Pita
-+Favorite Movie - Pulp Fiction
-
-commit 02891f719701cb3b57baf119a84c2efd5d88cfa4
-Author: Kiran Nadigatla <knadigatla@gmail.com>
-Date:   Sat Sep 3 14:59:16 2016 -0700
-
-    Now has my major
-
-diff --git a/file1.txt b/file1.txt
-index 86f9849..afa5c37 100644
---- a/file1.txt
-+++ b/file1.txt
-@@ -1 +1 @@
--Kiran Nadigatla #89396
-+Kiran Nadigatla Software Engineering
-
-commit 48d331f29ae90dbe1ad82edb48643ffe78fae88f
-Author: Kiran Nadigatla <knadigatla@gmail.com>
-Date:   Sat Sep 3 14:45:39 2016 -0700
-
-    Committing a new file with my name
-
-diff --git a/file1.txt b/file1.txt
-new file mode 100644
-index 0000000..86f9849
---- /dev/null
-+++ b/file1.txt
-@@ -0,0 +1 @@
-+Kiran Nadigatla #89396
+    Don't show report button for deleted links
+    
+    The report button doesn't do anything in this case and already
+    isn't shown for deleted comments.
