@@ -1,1 +1,2 @@
 making some changes
+adding somthing to B.txt
