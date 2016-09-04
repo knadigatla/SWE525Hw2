@@ -1,0 +1,81 @@
+1. What command did you use to configure the remote?
+
+git remote add origin https://github.com/knadigatla/SWE525Hw2.git
+
+2. Instead of creating a new git repository and configuring it with this remote, I could have asked you to git clone the repo from afs. If you had done so, what would the output of git remote -v be?
+
+It will directly set the remote repo linked to my local repo
+
+git clone https://github.com/knadigatla/swe525-project.git
+
+git remote -v
+origin 	https://github.com/knadigatla/swe525-project.git (fetch)
+origin 	https://github.com/knadigatla/swe525-project.git (push)
+
+3. Run git fetch remotename (substituting your remote name for remotename).
+Did anything appear in your working directory? Why?
+
+➜  swe525-project git:(master) git fetch origin
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/knadigatla/swe525-project
+   2a75895..61a1d56  master     -> origin/master
+It fetched changes from remote and copied to local and not yet copied to working directory. We need to do a git merge inorder to copy those changes to our local working directory.
+
+4. Update your local master branch with the remote one, and give the command you used to do so.
+
+I used git merge
+➜  swe525-project git:(master) git merge
+Updating 2a75895..61a1d56
+Fast-forward
+ newFile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newFile.txt
+
+5. Your working directory should have been updated. You should check that. That means the master branch was updated on the remote. But it's possible that when we ran git fetch, we fetched other branches as well! How could we (i.e. what command could we use) find all the branches we may have gotten from the remote?
+
+I used git branch -a
+
+➜  swe525-project git:(master) git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/feature1
+  remotes/origin/master
+
+6. Spoiler: there's another branch. Check it out, find the file on that branch, and give the first five letters of that file as well as the command you used to checkout the branch. NOTE: It's very bad practice to directly git checkout the remote-tracking branch. Instead, try to checkout the branch so that it creates a local branch based on the remote-tracking branch. If you're not sure how (it's pretty easy to guess, though), you can look it up.
+
+regular checkout with that branch name will create a local branch and set up the tracking
+
+➜  swe525-project git:(master) git checkout feature1
+Branch feature1 set up to track remote branch feature1 from origin.
+Switched to a new branch 'feature1'
+
+7. What is a bare repository? What makes it different from normal repositories? In what situations is it used?
+
+Well, a working repository created with git init is for… working. It is where you will actually edit, add and delete files and git commit to save your changes. If you are starting a project in a folder on your dev machine where you will add, edit and delete files of your project, use “git init”. Note: if you git clone a repository you will be given a working repository with the .git folder and copies of the working files for editing.
+
+A bare repository created with git init --bare is for… sharing. If you are collaborating with a team of developers, and need a place to share changes to a repo, then you will want to create a bare repository in centralized place where all users can push their changes (often the easy choice is github.com). Because git is a distributed version control system, no one will directly edit files in the shared centralized repository. Instead developers will clone the shared bare repo, make changes locally in their working copies of the repo, then push back to the shared bare repo to make their changes available to other users.
+
+Because no one ever makes edits directly to files in the shared bare repo, a working tree is not needed. In fact the working tree would just get in way and cause conflicts as users push code to the repository. This is why bare repositories exist and have no working tree.
+
+
+8. In lecture, I was careful to explain the two-step procedure of using git fetch and git merge remotename/branchname to get commits from a remote. When would this be a good idea as opposed to simply doing git pull remotename branchname? Briefly discuss remote-tracking branches and their relevance in your answer.
+
+in simple words, if you want to merge the remote branch changes to your local branch u need to use either "git pull" or "git fetch then merge". git fetch will fetch the remote branches to your local but not merge into your working directory. if there are any conflicts the pull will fail and mess up your branch. so when you have conflicts and many changes you better do a fetch and do a clean merge to your branch.
+
+9. I didn't ask you to do this, but suppose I asked you to make a commit on the 'other' branch. If I wanted you to push this branch, what command would you use?
+
+➜  swe525-project git:(feature1) git push origin feature1
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/knadigatla/swe525-project.git
+   ef5b646..cdedc28  feature1 -> feature1
+
+
+
+
